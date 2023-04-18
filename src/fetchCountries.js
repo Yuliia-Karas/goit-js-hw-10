@@ -1,25 +1,11 @@
-export
-function fetchCountries(name) {
-  fetch(name)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      return data;
-    })
-    .catch(error => {
-      console.log(error);
-    });
+export function fetchCountries(name) {
+  return fetch(
+    `https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`
+  ).then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  });
 }
-fetchCountries('https://restcountries.com/v3.1/all?fields=name');
 
-// fetch('https://restcountries.com/v3.1/all?fields=name')
-//   // `https://restcountries.com/v3.1/name/${name}`
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-//     return data;
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
-//

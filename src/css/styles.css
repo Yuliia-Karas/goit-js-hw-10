@@ -10,6 +10,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  padding-left: 40px;
 }
 
 #search-box {
@@ -17,4 +18,45 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+
+.country-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-img {
+  width: 50px;
+  height: 50px;
+}
+
+.card-name {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.card-descr {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.item-img {
+  width: 50px;
+  height: 50px;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+}
+
+.country-list{
+  padding-left: 0px;
 }
